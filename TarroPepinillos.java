@@ -36,4 +36,14 @@ public class TarroPepinillos{
             tarroAbierto = true;
         }
     }
-}
+    
+    public void imprimirDetalles(){
+        System.out.println("Marca:" + nombreMarca + ", NPepinillos:" + numeroPepinillos + ", Abierto:" + tarroAbierto); 
+    }
+    
+    public String verDetalles(){
+        String detalles;
+        detalles = ("Marca:" + nombreMarca + ", NPepinillos:" + numeroPepinillos + ", Abierto:" + tarroAbierto);
+        return detalles;
+    }
+}   
