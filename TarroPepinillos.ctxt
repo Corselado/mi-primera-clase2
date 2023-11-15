@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=TarroPepinillos
-comment1.params=cantidadPepinillos\ abierto
-comment1.target=TarroPepinillos(int,\ boolean)
+comment1.params=cantidadPepinillos\ marca
+comment1.target=TarroPepinillos(int,\ java.lang.String)
 comment2.params=
 comment2.target=java.lang.String\ getMarca()
 comment3.params=
