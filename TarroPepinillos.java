@@ -2,11 +2,13 @@ public class TarroPepinillos{
     private String nombreMarca;
     private int numeroPepinillos;
     private boolean tarroAbierto;
+    private boolean tarroRoto;
     
     public TarroPepinillos(int cantidadPepinillos,String marca){
         nombreMarca = marca;
         numeroPepinillos = cantidadPepinillos;
         tarroAbierto = false;
+        tarroRoto = true;
     }
     
     public String getMarca(){
@@ -19,6 +21,10 @@ public class TarroPepinillos{
     
     public boolean getEstado(){
         return tarroAbierto;
+    }
+    
+    public boolean getRotura(){
+        return tarroRoto;
     }
     
     public void cambiarMarca(String nuevaMarca){
@@ -37,6 +43,14 @@ public class TarroPepinillos{
         }
     }
     
+    public void romperTarro(){
+        if(tarroRoto == true) {
+            tarroRoto = false;
+        } else {
+            tarroRoto = true;
+        }
+    }
+    
     public void imprimirDetalles(){
         String estadoTarro;
         if(tarroAbierto == false){
@@ -44,7 +58,8 @@ public class TarroPepinillos{
         } else {
             estadoTarro = "Abierto";
         }
-        System.out.println("Marca:" + nombreMarca + ", NPepinillos:" + numeroPepinillos + ", Tapon:" + estadoTarro); 
+        System.out.println("Marca:" + nombreMarca + ", NPepinillos:" + numeroPepinillos + 
+        ", Tapon:" + estadoTarro + ", Tarro roto:" + tarroRoto ); 
     }
     
     public String verDetalles(){
@@ -55,7 +70,8 @@ public class TarroPepinillos{
             estadoTarro = "Abierto";
         }
         String detalles;
-        detalles = ("Marca:" + nombreMarca + ", NPepinillos:" + numeroPepinillos + ", Tapon:" + estadoTarro);
+        detalles = ("Marca:" + nombreMarca + ", NPepinillos:" + numeroPepinillos + ", Tapon:" + 
+        estadoTarro + ", Tarro roto:" + tarroRoto );
         return detalles;
     }
 }   
