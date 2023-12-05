@@ -3,12 +3,14 @@ public class TarroPepinillos{
     private int numeroPepinillos;
     private boolean tarroAbierto;
     private boolean tarroRoto;
+    private double decimal;
     
     public TarroPepinillos(int cantidadPepinillos,String marca){
         nombreMarca = marca;
         numeroPepinillos = cantidadPepinillos;
         tarroAbierto = false;
         tarroRoto = true;
+        decimal = 3.45;
     }
     
     public String getMarca(){
@@ -25,6 +27,10 @@ public class TarroPepinillos{
     
     public boolean getRotura(){
         return tarroRoto;
+    }
+    
+    public double getDecimal(){
+        return decimal;
     }
     
     public void cambiarMarca(String nuevaMarca){
@@ -51,6 +57,10 @@ public class TarroPepinillos{
         }
     }
     
+    public void cambiarDecimal(double nuevoDecimal){
+        decimal = nuevoDecimal;
+    }
+    
     public void imprimirDetalles(){
         String estadoTarro;
         if(tarroAbierto == false){
@@ -59,7 +69,7 @@ public class TarroPepinillos{
             estadoTarro = "Abierto";
         }
         System.out.println("Marca:" + nombreMarca + ", NPepinillos:" + numeroPepinillos + 
-        ", Tapon:" + estadoTarro + ", Tarro roto:" + tarroRoto ); 
+        ", Tapon:" + estadoTarro + ", Tarro roto:" + tarroRoto + ", Decimal : " + decimal ); 
     }
     
     public String verDetalles(){
@@ -71,7 +81,7 @@ public class TarroPepinillos{
         }
         String detalles;
         detalles = ("Marca:" + nombreMarca + ", NPepinillos:" + numeroPepinillos + ", Tapon:" + 
-        estadoTarro + ", Tarro roto:" + tarroRoto );
+        estadoTarro + ", Tarro roto:" + tarroRoto + ", Decimal : " + decimal );
         return detalles;
     }
 }   
